@@ -26,6 +26,7 @@ func main() {
 	for t := 0; t < 100; t++ {
 		fmt.Println("Testing is going well......")
 		fmt.Println("Object " + strconv.Itoa(t) + " " + a[t].name + " " + strconv.Itoa(a[t].age))
+
 		fmt.Println("")
 	}
 }
