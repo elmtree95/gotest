@@ -14,13 +14,14 @@ type person struct {
 var a [100]person
 
 func populateArray() {
-
 	for t := 0; t < 100; t++ {
 		a[t] = person{"test" + strconv.Itoa(t), 32 + t, "programmer" + strconv.Itoa(t)}
 	}
 }
 
 func main() {
+
+	//call func to build array with contents
 	populateArray()
 
 	for t := 0; t < 100; t++ {
