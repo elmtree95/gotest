@@ -2,18 +2,30 @@ package main
 
 import (
 	"fmt"
+	"strconv"
 )
 
-
-type  person struct{
-	name string
-	age int
+type person struct {
+	name       string
+	age        int
 	occupation string
 }
 
-func main() {
-	p := person{"test", 32, "programmer"}
+var a [100]person
 
-	fmt.Println("Testing is going well......")
-	fmt.Println("First object " + p.name)
+func populateArray() {
+
+	for t := 0; t < 100; t++ {
+		a[t] = person{"test" + strconv.Itoa(t), 32 + t, "programmer" + strconv.Itoa(t)}
+	}
+}
+
+func main() {
+	populateArray()
+
+	for t := 0; t < 100; t++ {
+		fmt.Println("Testing is going well......")
+		fmt.Println("Object " + strconv.Itoa(t) + " " + a[t].name + " " + strconv.Itoa(a[t].age))
+		fmt.Println("")
+	}
 }
