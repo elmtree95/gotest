@@ -9,6 +9,7 @@ type person struct {
 	name       string
 	age        int
 	occupation string
+	orientation string
 }
 
 var a [100]person
